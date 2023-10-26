@@ -109,7 +109,7 @@ arquivo.jpg
 6 git push                                       //(empurra) envia as atualizacoes para a nuvem na branch ativa (atual)
   git branch                                     //permite listar e ver qual branch esta ativa atualmente
   git branch <nova-branch>                       //permite criar uma nova branch (galho)
-  git branch -d <nome-branch>                   //excluir uma branch
+  git branch -d <nome-branch>                    //excluir uma branch
   git checkout <nome-branch>                     //permite mudar para uma nova branch
   git checkout -b <nova-branch> <branch-atual>   //cria uma nova branch a partir da branch atual e muda para a branch criada
   git pull <branch-main>                         //(puxa) mostra a versao mais recente da branch principal do codigo
