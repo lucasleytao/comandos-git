@@ -1,39 +1,41 @@
-# Comandos GIT (Git Bash)
+# Inicializar repositório Git (Git Bash)
 
-//dentro da pasta do projeto - botao direito - Open Git Bash here
+//dentro da pasta do projeto - botao direito - Open Git Bash here (abre uma linha de comando Git)
 
-## Inicializando git (criando arquivo git)
+## Criando um arquivo git	
 
-git init               //cria um arquivo git
-git status             //relatorio de atualizacao de status do codigo //arquivos incluidos - nao incluidos - atualizados
+git init               *//cria um arquivo git (somente na primeira vez)
+git status              //relatorio de atualizacao de status / arquivos incluidos - nao incluidos - atualizados - modificados
 
 ## Adicionando arquivos ao controle de versão (não enviados)
 
 git add "arquivo.ext" //Adiciona arquivo ao controle de versao
-git add .             //Adiciona todos os arquivos ao controle de versao
+git add .             //Adiciona todos os arquivos e pastas ao controle de versao
 
-git rm --cached "file" //remover um arquivo
+git rm --cached "arquivo.ext" //remover um arquivo
 
 ## Criando versões do código (commits)
 
 git commit -m "mensagem da versao"  //boa pratica
 
-## Configurando usuário do git (configuração do Git)
+## Configurando usuário do git (somente na primeira vez)
 
 git config --global user.email "email-github"  //define o email para os commits
 git config --global user.name "nome-identificador-atrelado-a-versao"  //define o nome do usuario para os commits
 
 ## Enviar alterações usando git push
 
-no GitHub > new repository (copia link)
+1 criar novo repositório no GitHub > new repository (copia link)
 
-no Git > git remote add origin (cola link - botao direito - paste) //define para onde o codigo sera enviado
+2 código no Git > git remote add origin (cola link - botao direito - paste) //define para onde o codigo sera enviado
 
 [enter] 
 
-git push (pede para copiar link <branch>)
+git push (pede para copiar link <branch>) *divisoes ou versoes diferentes de codigo *galho
 
-git push --set-upstream origin master
+git push --set-upstream origin master //branch selecionada
+
+**codigo enviado para o GitHub (repositorio remoto)
 
 # Histórico de atualizações
 
