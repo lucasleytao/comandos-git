@@ -1,4 +1,6 @@
-# Inicializar repositório Git (Git Bash)
+##### COMANDOS INICIAIS
+
+## Inicializar repositório Git (Git Bash)
 
 //dentro da pasta do projeto - botao direito - Open Git Bash here (abre uma linha de comando Git)
 
@@ -37,6 +39,8 @@ git push --set-upstream origin master //branch selecionada
 
 **codigo enviado para o GitHub (repositorio remoto)
 
+##### VERSÕES
+
 # Histórico de atualizações
 
 git reflog     //historico das versoes do codigo
@@ -44,6 +48,8 @@ git reflog     //historico das versoes do codigo
 # Voltar para uma versão anterior
 
 git reset --hard 1658aa4 (id da versao que deseja recuperar)
+
+##### BRANCH
 
 # Criando uma branch (galho)
 
@@ -63,7 +69,7 @@ git checkout -b beta-feature master  //cria uma nova branch a partir da branch a
 
 passo 1 - Entrar na branch que ira receber as atualizacoes
 
-git checkout <master>
+git checkout branchdestino
 
 passo 2 - Informar a branch que estara fornecendo as atualizacoes
 
@@ -73,13 +79,26 @@ Antes de executar o merge, deve-se verificar a atualizacao mais recente no servi
 
 git pull       //(puxar) mostra a versao mais recente da branch principal do codigo
 
-git merge <beta>
+git merge branchorigem   //branch que fornece as atualizacoes
 
 git push     //(empurrar) branch principal
+
+# passo-a-passo (trabalhando com equipes por questões de segurança garante que o código não seja quebrado)
+
+1.git pull da branch principal
+2.gerar uma nova branch a partir da branch principal
+3.trabalhar e adicionar novas funcionalidades na nova branch criada
+4.finalizar o trabalho na branch temporaria
+5.git checkout na branch principal
+6.git pull
+7.mergear(unir) o codigo da branch temporaria com a branch principal(depois de testar)
+8.git push da branch principal
 
 ## Pull Request(solicitar) 
 
 Avalicao e aprovacao ou reprovacao do codigo por um membro da equipe de desenvolvimento
+
+##### OCULTAR ARQUIVOS
 
 ## Git ignore (Ocultar uma pasta ou arquivo do controle de versao)
 
@@ -88,34 +107,34 @@ touch .gitignore  //cria um arquivo .gitignore (botao direito - abrir com bloco 
 pasta/
 arquivo.jpg
 
-## Estados
+##### ESTADOS
 
 * Modificado (modified);
 * Preparado (staged/index);
 * Consolidado (comitted);
 
-## RESUMAO
+##### PRINCIPAIS COMANDOS
 
 1 git init                                       //inicializa um novo repositorio git de um diretorio ja existente
 2 git status                                     //verifica o status atual dos repositorios git
   git clone url-endereco-do-repositorio-remoto   //clona um repositorio hospedado na nuvem
   touch .gitignore                               //cria um arquivo .gitignore (oculta arquivo.jpg ou pasta/)
 3 git branch -m main                             //a branch atual sera renomeada para main (padrao)
-  git add "file"                                 //adiciona um arquivo ao estado de pronto para commit (stage)
+  git add "arquivo.ext"                          //adiciona um arquivo ao estado de pronto para commit (stage)
 4 git add .                                      //adiciona todos os arquivos ao estado de pronto para commit (stage)
-  git restore --staged "file"                    //desfaz uma ou mais alteracoes feitas depois de usar o git add
-  git rm --cached "file"                         //remove um arquivo do estado de pronto para commit (stage)
+  git restore --staged "arquivo.ext"             //desfaz uma ou mais alteracoes feitas depois de usar o git add
+  git rm --cached "arquivo.ext"                  //remove um arquivo do estado de pronto para commit (stage)
   git diff                                       //mostra o que foi alterado antes de adicionar o arquivo para stage
   git diff --staged                              //compara alteracoes do stage como o commit anterior
-5 git commit -m "mensagem do commit"             //registra no commit as alteracoes com uma mensagem curta (checkpoint)
+5 git commit -m "mensagem de versao"             //registra no commit as alteracoes com uma mensagem curta (checkpoint)
 6 git push                                       //(empurra) envia as atualizacoes para a nuvem na branch ativa (atual)
   git branch                                     //permite listar e ver qual branch esta ativa atualmente
-  git branch <nova-branch>                       //permite criar uma nova branch (galho)
-  git branch -d <nome-branch>                    //excluir uma branch
-  git checkout <nome-branch>                     //permite mudar para uma nova branch
-  git checkout -b <nova-branch> <branch-atual>   //cria uma nova branch a partir da branch atual e muda para a branch criada
-  git pull <branch-main>                         //(puxa) mostra a versao mais recente da branch principal do codigo
-  git merge <branch-origem>                      //branch que fornece as atualizacoes
+  git branch nomebranch                          //permite criar uma nova branch (galho)
+  git branch -d nomebranch                       //excluir uma branch
+  git checkout nomebranch                        //permite mudar para uma nova branch
+  git checkout -b nomenovabranch branchatual     //cria uma nova branch a partir da branch atual e muda para a branch criada
+  git pull branchmain                            //(puxa) mostra a versao mais recente da branch principal do codigo
+  git merge branchorigem                         //branch que fornece as atualizacoes
 
 
 ## AJUDA

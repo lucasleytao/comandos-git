@@ -1,0 +1,6 @@
+git status       *relatorio de status
+git add .        *adiciona arquivos e pastas
+git commit -m "" *mensagem de versao
+git push         *envio de arquivos ao repositorio remoto
+
+https://www.youtube.com/watch?v=kB5e-gTAl_s&t=1177s
