@@ -1,3 +1,5 @@
+git init         *cria um arquivo .git *somente na primeira vez
+
 git status       *relatorio de status
 git add .        *adiciona arquivos e pastas
 git commit -m "" *mensagem de versao
