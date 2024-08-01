@@ -2,19 +2,28 @@
 
 ## Inicializar repositório Git (Git Bash)
 
-//dentro da pasta do projeto - botao direito - Open Git Bash here (abre uma linha de comando Git)
+Dentro da pasta do projeto >> Botão direito >> Open Git Bash here (abre uma linha de comando Git)
 
 ## Criando um arquivo git	
 
-git init               *//cria um arquivo git (somente na primeira vez)
-git status              //relatorio de atualizacao de status / arquivos incluidos - nao incluidos - atualizados - modificados
+	git init               
+Cria um arquivo git (somente na primeira vez)
+
+	git status              
+Relatório de atualizacao de status 
+
+Arquivos incluidos - Não incluidos - Atualizados - Modificados
 
 ## Adicionando arquivos ao controle de versão (não enviados)
 
-git add "arquivo.ext" //Adiciona arquivo ao controle de versao
-git add .             //Adiciona todos os arquivos e pastas ao controle de versao
+	git add "arquivo.ext" 
+Adiciona arquivo ao controle de versao
 
-git rm --cached "arquivo.ext" //remover um arquivo
+	git add .             
+Adiciona todos os arquivos e pastas ao controle de versao
+
+	git rm --cached "arquivo.ext" 
+Remover um arquivo
 
 ## Criando versões do código (commits)
 
@@ -113,28 +122,67 @@ arquivo.jpg
 * Preparado (staged/index);
 * Consolidado (comitted);
 
-##### PRINCIPAIS COMANDOS
+## PRINCIPAIS COMANDOS
 
-1 git init                                       //inicializa um novo repositorio git de um diretorio ja existente
-2 git status                                     //verifica o status atual dos repositorios git
-  git clone url-endereco-do-repositorio-remoto   //clona um repositorio hospedado na nuvem
-  touch .gitignore                               //cria um arquivo .gitignore (oculta arquivo.jpg ou pasta/)
-3 git branch -m main                             //a branch atual sera renomeada para main (padrao)
-  git add "arquivo.ext"                          //adiciona um arquivo ao estado de pronto para commit (stage)
-4 git add .                                      //adiciona todos os arquivos ao estado de pronto para commit (stage)
-  git restore --staged "arquivo.ext"             //desfaz uma ou mais alteracoes feitas depois de usar o git add
-  git rm --cached "arquivo.ext"                  //remove um arquivo do estado de pronto para commit (stage)
-  git diff                                       //mostra o que foi alterado antes de adicionar o arquivo para stage
-  git diff --staged                              //compara alteracoes do stage como o commit anterior
-5 git commit -m "mensagem de versao"             //registra no commit as alteracoes com uma mensagem curta (checkpoint)
-6 git push                                       //(empurra) envia as atualizacoes para a nuvem na branch ativa (atual)
-  git branch                                     //permite listar e ver qual branch esta ativa atualmente
-  git branch nomebranch                          //permite criar uma nova branch (galho)
-  git branch -d nomebranch                       //excluir uma branch
-  git checkout nomebranch                        //permite mudar para uma nova branch
-  git checkout -b nomenovabranch branchatual     //cria uma nova branch a partir da branch atual e muda para a branch criada
-  git pull branchmain                            //(puxa) mostra a versao mais recente da branch principal do codigo
-  git merge branchorigem                         //branch que fornece as atualizacoes
+	git init   
+Inicializa um novo repositorio git de um diretorio ja existente
+
+	git status                                     
+Verifica o status atual dos repositorios git
+  
+	git clone url-endereco-do-repositorio-remoto   
+Clona um repositorio hospedado na nuvem
+  
+	touch .gitignore                               
+Cria um arquivo .gitignore (oculta arquivo.jpg ou pasta/)
+	
+	git branch -m main                             
+A branch atual sera renomeada para main (padrao)
+
+	git add "arquivo.ext"                          
+Adiciona um arquivo ao estado de pronto para commit (stage)
+
+	git add .                                      
+Adiciona todos os arquivos ao estado de pronto para commit (stage)
+
+	git restore --staged "arquivo.ext"             
+Desfaz uma ou mais alteracoes feitas depois de usar o git add
+
+	git rm --cached "arquivo.ext"                  
+Remove um arquivo do estado de pronto para commit (stage)
+
+  	git diff                                       
+Mostra o que foi alterado antes de adicionar o arquivo para stage
+
+	git diff --staged                              
+Compara alteracoes do stage como o commit anterior
+
+	git commit -m "mensagem de versao"             
+Registra no commit as alteracoes com uma mensagem curta (checkpoint)
+
+	git push                                       
+(Empurra) envia as atualizacoes para a nuvem na branch ativa (atual)
+
+  	git branch                                     
+Permite listar e ver qual branch esta ativa atualmente
+
+  	git branch nomebranch                          
+Permite criar uma nova branch (galho)
+
+  	git branch -d nomebranch                       
+Excluir uma branch
+
+  	git checkout nomebranch                        
+Permite mudar para uma nova branch
+
+  	git checkout -b nomenovabranch branchatual     
+Cria uma nova branch a partir da branch atual e muda para a branch criada
+
+  	git pull branchmain                            
+(Puxa) mostra a versao mais recente da branch principal do codigo
+
+  	git merge branchorigem                         
+Branch que fornece as atualizacoes
 
 
 ## AJUDA
