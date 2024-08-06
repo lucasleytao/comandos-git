@@ -1,2 +1,2 @@
 # git-github
-Principais comandos git bash
+principais comandos git bash
