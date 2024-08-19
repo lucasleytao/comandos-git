@@ -1,8 +1,8 @@
-##### COMANDOS INICIAIS
+## COMANDOS
 
 ## Inicializar repositório Git (Git Bash)
 
-Dentro da pasta do projeto >> Botão direito >> Open Git Bash here (abre uma linha de comando Git)
+Dentro da pasta do projeto (Botão direito) Open Git Bash here (abre uma linha de comando Git)
 
 ## Criando um arquivo git	
 
@@ -10,180 +10,356 @@ Dentro da pasta do projeto >> Botão direito >> Open Git Bash here (abre uma lin
 Cria um arquivo git (somente na primeira vez)
 
 	git status              
-Relatório de atualizacao de status 
+## Relatório de atualizacao de status 
 
-Arquivos incluidos - Não incluidos - Atualizados - Modificados
+No Visual Studio Code (VS Code), o controle de versão Git é integrado, e as letras que aparecem ao lado dos arquivos indicam o status deles em relação ao Git. Aqui estão as principais letras e seus significados:
 
-## Adicionando arquivos ao controle de versão (não enviados)
+### 1. **U** - **Untracked**
+   - **Significado:** O arquivo é novo e não está sendo rastreado pelo Git.
+   - **Exemplo:** `U  new-file.js`
 
-	git add "arquivo.ext" 
-Adiciona arquivo ao controle de versao
+### 2. **M** - **Modified**
+   - **Significado:** O arquivo foi modificado em relação ao último commit, mas ainda não foi adicionado à área de staging.
+   - **Exemplo:** `M  modified-file.js`
 
-	git add .             
-Adiciona todos os arquivos e pastas ao controle de versao
+### 3. **A** - **Added**
+   - **Significado:** O arquivo foi adicionado à área de staging, ou seja, foi incluído para o próximo commit.
+   - **Exemplo:** `A  added-file.js`
 
-	git rm --cached "arquivo.ext" 
-Remover um arquivo
+### 4. **D** - **Deleted**
+   - **Significado:** O arquivo foi deletado e essa exclusão foi adicionada à área de staging.
+   - **Exemplo:** `D  deleted-file.js`
 
-## Criando versões do código (commits)
+### 5. **R** - **Renamed**
+   - **Significado:** O arquivo foi renomeado, e essa renomeação foi adicionada à área de staging.
+   - **Exemplo:** `R  renamed-file.js -> new-name.js`
 
-git commit -m "mensagem da versao"  //boa pratica
+### 6. **C** - **Copied**
+   - **Significado:** O arquivo foi copiado de outro arquivo e essa cópia foi adicionada à área de staging.
+   - **Exemplo:** `C  copied-file.js`
 
-## Configurando usuário do git (somente na primeira vez)
+### 7. **??** - **Untracked**
+   - **Significado:** Similar ao "U", indica que o arquivo é novo e não está sendo rastreado pelo Git.
+   - **Exemplo:** `?? new-file.js`
 
-git config --global user.email "email-github"  //define o email para os commits
-git config --global user.name "nome-identificador-atrelado-a-versao"  //define o nome do usuario para os commits
+### 8. **AM** - **Added and Modified**
+   - **Significado:** O arquivo foi adicionado e modificado antes do commit.
+   - **Exemplo:** `AM added-and-modified-file.js`
 
-## Enviar alterações usando git push
+### 9. **MM** - **Modified in both Staging and Working Directory**
+   - **Significado:** O arquivo foi modificado e adicionado à área de staging, e depois foi modificado novamente na working directory.
+   - **Exemplo:** `MM modified-file.js`
 
-1 criar novo repositório no GitHub > new repository (copia link)
+### 10. **UU** - **Unmerged**
+   - **Significado:** Indica um conflito de merge que não foi resolvido.
+   - **Exemplo:** `UU conflicting-file.js`
 
-2 código no Git > git remote add origin (cola link - botao direito - paste) //define para onde o codigo sera enviado
+Essas letras ajudam a identificar rapidamente o estado de cada arquivo no repositório Git dentro do VS Code.
 
-[enter] 
-
-git push (pede para copiar link <branch>) *divisoes ou versoes diferentes de codigo *galho
-
-git push --set-upstream origin master //branch selecionada
-
-**codigo enviado para o GitHub (repositorio remoto)
-
-##### VERSÕES
-
-# Histórico de atualizações
-
-git reflog     //historico das versoes do codigo
-
-# Voltar para uma versão anterior
-
-git reset --hard 1658aa4 (id da versao que deseja recuperar)
-
-##### BRANCH
-
-# Criando uma branch (galho)
-
-git branch    //mostra a branch atual 
-
-git branch beta  //cria uma nova branch
-
-git branch   //mostra a lista de branches
-
-git checkout beta  //muda para a branch desejada
-
-MODO CURTO!
-
-git checkout -b beta-feature master  //cria uma nova branch a partir da branch atual e muda automaticamente para a branch criada
-
-# Git merge (unir o branches)
-
-passo 1 - Entrar na branch que ira receber as atualizacoes
-
-git checkout branchdestino
-
-passo 2 - Informar a branch que estara fornecendo as atualizacoes
-
-IMPORTANTE!!! CUIDADO PARA NAO QUEBRAR A BRANCH PRINCIPAL!
-
-Antes de executar o merge, deve-se verificar a atualizacao mais recente no servidor
-
-git pull       //(puxar) mostra a versao mais recente da branch principal do codigo
-
-git merge branchorigem   //branch que fornece as atualizacoes
-
-git push     //(empurrar) branch principal
-
-# passo-a-passo (trabalhando com equipes por questões de segurança garante que o código não seja quebrado)
-
-1.git pull da branch principal
-2.gerar uma nova branch a partir da branch principal
-3.trabalhar e adicionar novas funcionalidades na nova branch criada
-4.finalizar o trabalho na branch temporaria
-5.git checkout na branch principal
-6.git pull
-7.mergear(unir) o codigo da branch temporaria com a branch principal(depois de testar)
-8.git push da branch principal
-
-## Pull Request(solicitar) 
-
-Avalicao e aprovacao ou reprovacao do codigo por um membro da equipe de desenvolvimento
-
-##### OCULTAR ARQUIVOS
+## OCULTAR ARQUIVOS
 
 ## Git ignore (Ocultar uma pasta ou arquivo do controle de versao)
 
-touch .gitignore  //cria um arquivo .gitignore (botao direito - abrir com bloco de notas e especificar o arquivo que deseja ocultar [salvar])
+Cria um arquivo .gitignore (botao direito - abrir com bloco de notas e especificar o arquivo que deseja ocultar [salvar])
 
-pasta/
-arquivo.jpg
+	touch .gitignore
 
-##### ESTADOS
+* pasta/
+* arquivo.jpg
+
+## ESTADOS
 
 * Modificado (modified);
 * Preparado (staged/index);
 * Consolidado (comitted);
 
-## PRINCIPAIS COMANDOS
+## Adicionando arquivos ao controle de versão (não enviados)
 
-	git init   
-Inicializa um novo repositorio git de um diretorio ja existente
+### Adiciona um arquivo específico ao controle de versão
 
-	git status                                     
-Verifica o status atual dos repositorios git
-  
-	git clone url-endereco-do-repositorio-remoto   
-Clona um repositorio hospedado na nuvem
-  
-	touch .gitignore                               
-Cria um arquivo .gitignore (oculta arquivo.jpg ou pasta/)
+	git add "arquivo.ext" 
+Adiciona todos os arquivos e pastas ao controle de versao
+
+	git add .             
+
+Remove um arquivo específico
+
+	git rm --cached "arquivo.ext" 
+
+
+## Criando versões do código (commits)
+
+	git commit -m "mensagem da versao"
+
+## Configurando usuário do git (somente na primeira vez)
+
+## Boa prática
+Define o email para os commits
+
+	git config --global user.email "email-github"
+
+Define o nome do usuario para os commits
+
+	git config --global user.name"nome-identificador-atrelado-a-versao"  
+
+## Enviar alterações usando git push
+
+* Criar novo repositório no GitHub 
+* New repository (copia link)
+
+## Código no Git 
+Define para onde o código será enviado
+
+	git remote add origin (cola link - botao direito - paste)
+
+[enter] 
+
+	git push (pede para copiar link <branch>) 
+Divisões ou versões diferentes de código (galho)
+
+Selecionar branch
+
+	git push --set-upstream origin master 
+
+## Sucesso!  
+Código enviado para o GitHub (repositório remoto)
+
+## VERSÕES
+
+## Histórico de atualizações do código
+
+	git reflog   
+
+## Voltar para uma versão anterior
+
+	git reset --hard 1658aa4 (id da versao que deseja recuperar)
+
+## BRANCHS
+
+## Criando uma branch (galho)
+Mostra a branch atual
+
+	git branch     
+
+Cria uma nova branch
+
+	git branch beta  
+
+Mostra a lista de branchs
+
+	git branch   
+
+Muda para a branch desejada
 	
-	git branch -m main                             
-A branch atual sera renomeada para main (padrao)
+	git checkout beta  
 
-	git add "arquivo.ext"                          
-Adiciona um arquivo ao estado de pronto para commit (stage)
+MODO CURTO!
 
-	git add .                                      
-Adiciona todos os arquivos ao estado de pronto para commit (stage)
+Cria uma nova branch a partir da branch atual e muda automaticamente para a branch criada
 
-	git restore --staged "arquivo.ext"             
-Desfaz uma ou mais alteracoes feitas depois de usar o git add
+	git checkout -b beta-feature master  
 
-	git rm --cached "arquivo.ext"                  
-Remove um arquivo do estado de pronto para commit (stage)
+Excluir uma branch remota específica
 
-  	git diff                                       
-Mostra o que foi alterado antes de adicionar o arquivo para stage
+	git push origin --delete <nome da branch>
 
-	git diff --staged                              
-Compara alteracoes do stage como o commit anterior
+## Git merge (unir branches)
 
-	git commit -m "mensagem de versao"             
-Registra no commit as alteracoes com uma mensagem curta (checkpoint)
+* passo 1 - Entrar na branch que irá receber as atualizacoes
 
-	git push                                       
-(Empurra) envia as atualizacoes para a nuvem na branch ativa (atual)
+git checkout branchdestino
 
-  	git branch                                     
-Permite listar e ver qual branch esta ativa atualmente
+* passo 2 - Informar a branch que estará fornecendo as atualizacoes
 
-  	git branch nomebranch                          
-Permite criar uma nova branch (galho)
+IMPORTANTE!!! CUIDADO PARA NÃO QUEBRAR A BRANCH PRINCIPAL!
 
-  	git branch -d nomebranch                       
-Excluir uma branch
+ANTES DE EXECUTAR O MERGE, DEVE-SE VERIFICAR A ATUALIZAÇÃO MAIS RECENTE DO SERVIDOR
 
-  	git checkout nomebranch                        
-Permite mudar para uma nova branch
+Mostra a versao mais recente da branch principal do codigo
 
-  	git checkout -b nomenovabranch branchatual     
-Cria uma nova branch a partir da branch atual e muda para a branch criada
+	git pull (puxar)       
 
-  	git pull branchmain                            
-(Puxa) mostra a versao mais recente da branch principal do codigo
-
-  	git merge branchorigem                         
 Branch que fornece as atualizacoes
 
+	git merge branchorigem   
+
+Branch principal
+
+	git push (empurrar)    
+
+## Trabalhando com equipes
+
+## Passo a passo de segurança que garante que o código não seja quebrado
+
+* 1 git pull da branch principal
+* 2 gerar uma nova branch a partir da branch principal
+* 3 trabalhar e adicionar novas funcionalidades na nova branch criada
+* 4 finalizar o trabalho na branch temporaria
+* 5 git checkout na branch principal
+* 6 git pull
+* 7 mergear (unir) o código da branch temporária com a branch principal (depois de testar)
+* 8 git push da branch principal
+
+## Pull Request (solicitar) 
+
+Avalição (aprovação ou reprovação) do código por um membro da equipe de desenvolvimento
+
+Fluxo básico de trabalho no Git para clonar um repositório no qual você é colaborador, fazer alterações e submetê-las para revisão em um Pull Request.
+
+1. **Configurar Git**:
+   Certifique-se de que o Git está instalado no seu computador. Você pode verificar isso abrindo o terminal ou prompt de comando e digitando `git --version`. Se o Git não estiver instalado, você pode baixá-lo e instalá-lo do [site oficial do Git](https://git-scm.com/).
+
+2. **Configurar suas credenciais no Git**:
+   Antes de clonar o repositório, é uma boa prática configurar seu nome de usuário e email no Git, que serão usados nas suas contribuições. Você pode fazer isso com os seguintes comandos:
+   ```bash
+   git config --global user.name "Seu Nome"
+   git config --global user.email "seu.email@exemplo.com"
+   ```
+
+3. **Clonar o repositório**:
+   - Encontre o URL do repositório no GitHub. Isso pode ser encontrado na página principal do repositório, geralmente sob o botão "Clone or download".
+   - Abra o terminal ou prompt de comando e digite o seguinte comando para clonar o repositório:
+     ```bash
+     git clone URL_DO_REPOSITÓRIO
+     ```
+4. **Navegar até o diretório do repositório**:
+   Após clonar, um novo diretório com o nome do repositório será criado. Navegue até este diretório com o comando:
+   ```bash
+   cd nome_do_repositório
+   ```
+
+5. **Criar uma nova branch**:
+   É uma boa prática não trabalhar diretamente na branch principal (geralmente chamada de `main` ou `master`). Crie uma nova branch para suas alterações:
+   ```bash
+   git checkout -b nome_da_nova_branch
+   ```
+
+6. **Fazer suas alterações**:
+   Abra os arquivos no seu editor de código de preferência e faça as alterações necessárias.
+
+7. **Adicionar as alterações para o próximo commit**:
+   Depois de fazer suas alterações, você precisa adicionar essas alterações ao índice do Git usando:
+   ```bash
+   git add .
+   ```
+   Ou, se preferir adicionar arquivos específicos:
+   ```bash
+   git add caminho_para_arquivo
+   ```
+
+8. **Fazer o commit das alterações**:
+   Commitar suas alterações armazena um snapshot das alterações no histórico do Git. Faça isso com:
+   ```bash
+   git commit -m "Descreva as alterações feitas"
+   ```
+
+9. **Enviar as alterações para o repositório remoto**:
+   Após fazer o commit das suas alterações localmente, você precisa enviá-las para o repositório remoto (GitHub) para que todos os colaboradores possam vê-las. Faça isso com:
+   ```bash
+   git push origin nome_da_nova_branch
+   ```
+
+10. **Criar um Pull Request**:
+    - Vá até a página do GitHub do repositório e você geralmente verá um prompt para "Comparar & pull request" na nova branch que você enviou. Clique nisso.
+    - Revise as mudanças e, se estiver tudo certo, crie o Pull Request para a branch principal. Você pode adicionar descrições adicionais e discutir as alterações com outros colaboradores antes de suas alterações serem mescladas.
+
+## Remover repositório
+
+Para alterar o repositório remoto que já está configurado, você pode usar os seguintes comandos do Git:
+
+## Remover o repositório remoto existente:
+
+	git remote remove origin
+
+## Adicionar o novo repositório remoto:
+
+	git remote add origin https://repositorio_escolhido
+
+## Verificar se o novo repositório remoto foi configurado corretamente
+
+	git remote -v
+
+## PRINCIPAIS COMANDOS
+
+Inicializa um novo repositório git de um diretório já existente
+
+    git init
+
+Verifica o status atual dos repositórios git
+
+    git status
+
+Clona um repositório hospedado na nuvem
+
+    git clone url-endereco-do-repositorio-remoto
+
+Cria um arquivo `.gitignore` (oculta `arquivo.jpg` ou `pasta/`)
+
+    touch .gitignore
+
+A branch atual será renomeada para `main` (padrão)
+
+    git branch -m main
+
+Adiciona um arquivo ao estado de pronto para commit (stage)
+
+    git add "arquivo.ext"
+
+Adiciona todos os arquivos ao estado de pronto para commit (stage)
+
+    git add .
+
+Desfaz uma ou mais alterações feitas depois de usar o `git add`
+
+    git restore --staged "arquivo.ext"
+
+Remove um arquivo do estado de pronto para commit (stage)
+
+    git rm --cached "arquivo.ext"
+
+Mostra o que foi alterado antes de adicionar o arquivo para stage
+
+    git diff
+
+Compara alterações do stage com o commit anterior
+
+    git diff --staged
+
+Registra no commit as alterações com uma mensagem curta (checkpoint)
+
+    git commit -m "mensagem de versao"
+
+Envia as atualizações para a nuvem na branch ativa (atual)
+
+    git push
+
+Permite listar e ver qual branch está ativa atualmente
+
+    git branch
+
+Permite criar uma nova branch (galho)
+
+    git branch nomebranch
+
+Excluir uma branch
+
+    git branch -d nomebranch
+
+Permite mudar para uma nova branch
+
+    git checkout nomebranch
+
+Cria uma nova branch a partir da branch atual e muda para a branch criada
+
+    git checkout -b nomenovabranch branchatual
+
+Mostra a versão mais recente da branch principal do código
+
+    git pull branchmain
+
+Branch que fornece as atualizações
+
+    git merge branchorigem
 
 ## AJUDA
 
