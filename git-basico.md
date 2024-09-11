@@ -1,4 +1,4 @@
-## GitBash
+## Git | GitHub
 ### Git version
     git --version
 ### User list (lista de identificacao)
@@ -42,41 +42,41 @@
 ## Comandos especiais
 ### Repositório específico (sai do atual e entra no especifico)
     cd ../nome_repositorio
-## Log de envios (sair > q)
+### Log de envios (sair > q)
     git log
-## Historico de envios de um determinado autor
+### Historico de envios de um determinado autor
     git log --author=nome_usuario
-## Log de envios condensado (sair > q)
+### Log de envios condensado (sair > q)
     git log --oneline
-## Reverter envio (checkout) Verde
+### Reverter envio (checkout) Verde
 ### Não altera histórico do Git (Marco histórico)
     git log --oneline (copia id_envio)
     git checkout id_envio (verifica versao)
     git checkout main (retorna a ultima versao)
-## Reverter envio (Revert) [ :q ] Amarelo
+### Reverter envio (Revert) [ :q ] Amarelo
 ### Altera histórico do Git
     git log --oneline (copia id_envio)
     git revert id_envio (desfaz e altera historico)
-## Reverter envio (Reset) [ :q ] Vermelho
+### Reverter envio (Reset) [ :q ] Vermelho
 ### Apaga histórico do Git
     git log --oneline (copia id_envio)
     git reset id_envio (apaga historico)
     git reset id_envio --hard (apaga tudo)
-## Unir comandos (&&)
+### Unir comandos (&&)
     git add . && git commit -m "mensagem"
-## Git ignore (Ocultar uma pasta ou arquivo do controle de versao)
+### Git ignore (Ocultar uma pasta ou arquivo do controle de versao)
     touch .gitignore
 * pasta/
 * arquivo.jpg
-## Branch
+### Branch
     git branch (lista branchs)
     git branch nome_branch (cria uma nova branch)
     git branch -b nome_branch (cria e seleciona)
     git checkout nome_branch (escolhe branch)
     git branch -D nome_branch (hard delete branch)
-## Push da branch
+### Push da branch
     git push origin nome_branch
-## Merge (Fundir branchs)
+### Merge (Fundir branchs)
 * Seleciona Branch de destino
 ##
     git merge nome-branch
@@ -86,36 +86,33 @@
 ##
 * Push (Empurrar): Subir
 * Pull: Baixar
-## #Push (Empurrar)
-## Push (forma verbosa)
+### #Push (Empurrar) (forma verbosa)
     git push link_repositorio nome_branch(origem)
-## Adicionar Alias (Apelido) para o repositório
+### Adicionar Alias (Apelido) para o repositório
     git remote add origin(apelido) link_repositorio
-## Verificar configurações do apelido (fletch e push)
+### Verificar configurações do apelido (fletch e push)
     git remote -v
-## Push (forma reduzida)
+### Push (forma reduzida)
     git push origin nome_branch
-## #Pull (Baixar)
-## Git Pull
+### #Pull (Baixar)
 * Verifica se há atualizações e faz o MERGE no diretório principal
 ##
     git pull origin diretorio_principal
-## #Clone (Clonar repositório)
-## Git Clone
+### #Clone (Clonar repositório)
 * Copia link do repositório que deseja clonar (Code)
 ##
     git clone link_projeto
-* Clone de projeto com nome específico
+* Clone de projeto com nome próprio
 ##
-    git clone link_projeto nome_especifico
+    git clone link_projeto nome_proprio
 * Excluir uma pasta clonada (hard reset)
 ##
     rm -rf nome-do-projeto
-## #Pull Request
+### #Pull Request (Abre um pedido de fusão)
 * entrar no projeto
-## [ Compare & pull request ]
+### [ Compare & pull request ]
 * cria um pull request para o seu tech lead analisar, ou seja, abre um pedido de fusão com a branch principal (em produção)
-## #Fork
+### #Fork
 * Contribuição com outros projetos OpenSource no GitHub
 
 
