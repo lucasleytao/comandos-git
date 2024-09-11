@@ -1,4 +1,4 @@
-## CMD - Git
+## GitBash
 ### Git version
     git --version
 ### User list (lista de identificacao)
@@ -25,6 +25,8 @@
 * Down (pra baixo)
 ### Remover arquivo (remove)
     git rm nome_arquivo.txt
+### Remover diretorio (local)
+    rm -rf nome_diretorio
 ### Remover diretorio
     git rm -r nome_diretorio
 ### Nano (editor de texto para terminal)
