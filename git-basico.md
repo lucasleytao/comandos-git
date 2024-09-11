@@ -1,33 +1,33 @@
-## Git | GitHub
+## Git#GitHub
 ### Git version
     git --version
-### User list (lista de identificacao)
+### User list (lista de identificação)
     git config --global --list
 ### User
     git config --global user.name 'nome'
     git config --global user.email 'email'
-### List (lista de arquivos e diretorios)
+### List (lista de arquivos e diretórios)
     ls
 ### Arquivos ocultos (lista arquivos ocultos)
     ls -a
-### Change Directory (mudar diretorio)
+### Change Directory (mudar diretório)
     cd nome_diretorio
-### Change Directory (diretorio anterior)
+### Change Directory (diretório anterior)
     cd ..
 ### Touch (criar arquivo)
     touch nome_arquivo.txt
-### Make (crar diretorio)
+### Make (criar diretório)
     mkdir nome_diretorio
 ### Clear (limpar)
     clear
 ### Histórico de comandos
 * Up (pra cima)
 * Down (pra baixo)
-### Remover arquivo (remove)
+### Excluir arquivo (remove)
     git rm nome_arquivo.txt
-### Remover diretorio (local)
+### Excluir diretório (local)
     rm -rf nome_diretorio
-### Remover diretorio
+### Excluir diretório
     git rm -r nome_diretorio
 ### Nano (editor de texto para terminal)
     nano nome_aquivo.txt (se não existir, será criado)
@@ -35,16 +35,16 @@
 * Control + O (Output) 'Gravar e Sair'
 * Confirmar nome do arquivo 'Enter'
 * Control + X 'Sair do nano'
-### Cat (exibe conteudo de um arquivo)
+### Cat (exibe conteúdo de um arquivo)
     cat nome_arquivo.txt
 ### Mover ou Renomear
     mv nome_arquivo nome_arquivo1 
 ## Comandos especiais
-### Repositório específico (sai do atual e entra no especifico)
+### Repositório específico (sai do atual e entra no específico)
     cd ../nome_repositorio
 ### Log de envios (sair > q)
     git log
-### Historico de envios de um determinado autor
+### Histórico de envios de um determinado autor
     git log --author=nome_usuario
 ### Log de envios condensado (sair > q)
     git log --oneline
@@ -64,7 +64,7 @@
     git reset id_envio --hard (apaga tudo)
 ### Unir comandos (&&)
     git add . && git commit -m "mensagem"
-### Git ignore (Ocultar uma pasta ou arquivo do controle de versao)
+### Git ignore (Ocultar uma pasta ou arquivo do controle de versão)
     touch .gitignore
 * pasta/
 * arquivo.jpg
