@@ -1,4 +1,17 @@
 ## Git#GitHub
+* Diretório: Pasta de arquivos
+* Repositório: Rastreador de arquivos
+### #Git
+* Ferramenta que rastreia alterações de código, auxiliando desenvolvedores que trabalham de forma colaborativa. Os objetivos incluem velocidade e integridade de dados e suporte para fluxos de trabalho não lineares distribuidos.
+### #GitHub
+* É um provedor (servidor) de hospedagem remoto para desenvolvimento de software e controle de versão utilizando o Git. Ele oferece o controle de versão distribuida e a funcionalidade de gerenciamento de código no Git, além de seus próprios recursos.
+### #Pontos importantes
+* Commit: Funciona como um marco histórico de alterações importantes.
+### Estágios do Commit
+    Modified (Modificado): Arquivos alterados
+    Staging (Área de palco): Arquivos prontos para envio
+    Committed: Arquivos enviados
+## Comandos
 ### Git version
     git --version
 ### User list (lista de identificação)
