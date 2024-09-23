@@ -14,9 +14,9 @@
 	git init   
 ##            
 	git status              
-## Relatório de atualizacao de status 
+### Relatório de atualização de status 
 
-No Visual Studio Code (VS Code), o controle de versão Git é integrado, e as letras que aparecem ao lado dos arquivos indicam o status deles em relação ao Git. Aqui estão as principais letras e seus significados:
+* No Visual Studio Code (VS Code), o controle de versão Git é integrado, e as letras que aparecem ao lado dos arquivos indicam o status deles em relação ao Git. Aqui estão as principais letras e seus significados:
 
 ### 1. **U** - Untracked
    - **Significado:** O arquivo é novo e não está sendo rastreado pelo Git.
@@ -43,11 +43,13 @@ No Visual Studio Code (VS Code), o controle de versão Git é integrado, e as le
    - **Exemplo:** `C  copied-file.js`
 ### Git version
     git --version
+### Listando Usuários
 ### User list (lista de identificação)
     git config --global --list
 ### User
     git config --global user.name 'nome'
     git config --global user.email 'email'
+### Listando Arquivos
 ### List (lista de arquivos e diretórios)
     ls
 ### Arquivos ocultos (lista arquivos ocultos)
