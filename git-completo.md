@@ -91,6 +91,11 @@ Remove um arquivo específico
 
 	git commit -m "mensagem da versao"
 
+## Alterar mensagem de commit
+    git commit --amend
+* Isso abrirá o editor de texto Vim
+* Edite > Esc > Digite :wq > Enter
+
 ## Configurando usuário do git (somente na primeira vez)
 
 ## Boa prática
